@@ -1,0 +1,6 @@
+[1127/152552.112:ERROR:crash_report_database_win.cc(568)] CreateDirectory C:\Program Files (x86)\Coldold\Reports\Dump: El sistema no puede encontrar la ruta especificada. (0x3)
+[1127/152552.114:ERROR:registration_protocol_win.cc(84)] TransactNamedPipe: Ha terminado la canalización. (0x6D)
+[1127/152552.114:ERROR:crash_report_database_win.cc(568)] CreateDirectory C:\Program Files (x86)\Coldold\Reports\Dump: El sistema no puede encontrar la ruta especificada. (0x3)
+[1127/152702.109:ERROR:crash_report_database_win.cc(568)] CreateDirectory C:\Program Files (x86)\Coldold\Reports\Dump: El sistema no puede encontrar la ruta especificada. (0x3)
+[1127/152702.111:ERROR:registration_protocol_win.cc(84)] TransactNamedPipe: Ha terminado la canalización. (0x6D)
+[1127/152702.111:ERROR:crash_report_database_win.cc(568)] CreateDirectory C:\Program Files (x86)\Coldold\Reports\Dump: El sistema no puede encontrar la ruta especificada. (0x3)
