@@ -1,0 +1,10 @@
+Problemas encontrados
+
+
+The bootstrap/cache directory must be present and writable.
+se soluciona con: php artisan cache:clear
+
+RuntimeException
+The only supported ciphers are AES-128-CBC and AES-256-CBC with the correct key lengths.
+se soluciona con: php artisan key:generate
+
