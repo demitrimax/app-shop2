@@ -83,25 +83,29 @@
                 </div>
 
                 <div class="section text-center">
-                    <h2 class="title">Productos Disponibles</h2>
+                    <h2 class="title">Visita nuestras categorías</h2>
+                    <form class="form-inline" method="get" action="{{ url('/search') }}">
+                        <input type="text" value="" placeholder="¿Qué producto buscas?" class="form-control" name="query">
+                        <button class="btn btn-primary btn-just-icon" type="submit">
+                            <i class="material-icons">search</i>
+                        </button>
+                    </form>
 
                     <div class="team">
                         <div class="row">
-                            @foreach ($products as $product)
+                            @foreach ($categories as $category)
                             <div class="col-md-4">
                                 <div class="team-player">
-                                    <img src="{{ $product->featured_image_url}}" alt="Thumbnail Image" class="img-raised img-circle">
-                                    <h4 class="title"><a href="{{ url('/products/'.$product->id.'/')}}">{{$product->name}} </a><br />
-                                        <small class="text-muted">{{$product->category->name}}</small>
+                                    <img src="{{ $category->featured_image_url}}" alt="Imagen representativa de la cateogoría" class="img-raised img-circle">
+                                    <h4 class="title"><a href="{{ url('/categories/'.$category->id.'/')}}">{{$category->name}} </a><br />
+                                        
                                     </h4>
-                                    <p class="description">{{$product->description}}</p>   
+                                    <p class="description">{{$category->description}}</p>   
                                 </div>
                             </div>
                             @endforeach
                         </div>
-                        <div class="text-center">
-                                {{ $products->links() }}
-                        </div>
+
                     </div>
 
                 </div>

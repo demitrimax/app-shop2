@@ -23,6 +23,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/products/{id}', 'ProductController@show'); 
+Route::get('/categories/{category}', 'CategoryController@show');
+
+Route::get('/search', 'SearchController@show');
 
 Route::post('/cart', 'CartDetailController@store');
 Route::delete('/cart', 'CartDetailController@destroy');
@@ -42,6 +45,14 @@ Route::middleware(['auth','admin'])->namespace('Admin')->group(function () {
 	Route::post('admin/products/{id}/images','ImageController@store'); //formulario para agregar imagenes a un producto
 	Route::delete('admin/products/{id}/images','ImageController@destroy'); //formulario para eliminar imagenes
 	Route::get('admin/products/{id}/images/select/{image}','ImageController@select'); //muestra las imagenes que tiene un producto
+
+	Route::get('/admin/categories','CategoryController@index'); //listado de categorias
+	Route::get('/admin/categories/create','CategoryController@create'); //formulario para crear
+	Route::post('/admin/categories','CategoryController@store'); //registrar
+	Route::get('/admin/categories/{category}/edit','CategoryController@edit'); //formulario para edición
+	Route::post('/admin/categories/{category}/edit','CategoryController@update'); //formulario para editar
+	Route::post('/admin/categories/{category}/delete','CategoryController@destroy'); //form eliminar
+
 });
 
 
